@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Background Fetch
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="data.length == 0">
+    <ion-card-content center>
+      There is no data available.
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <div ion-item *ngFor="let item of data">
+      {{item}}
+    </div>
+  </ion-list>
+  <button ion-button (click)="updateUI()">Update UI</button>
+  <button ion-button (click)="clearLocalStorage()">Clear local storage</button>
+</ion-content>
